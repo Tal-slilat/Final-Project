@@ -18,81 +18,82 @@
  
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-trainer-tab">
 
-
-        <form>
+<!-- הרשמה של מאלף כלב -->
+        <form id="rtl">
                 <div class="form-group">
                     <label for="exampleInputEmail1">שם פרטי</label>
-                        <input type="text" class="form-control">
+                        <input type="text" id="fname_trainer" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">שם משפחה</label>
-                        <input type="text" class="form-control">
+                        <input type="text" id="lname_trainer" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">אימייל</label>
-                        <input type="email" class="form-control">
+                        <input type="email" id="email_trainer" class="form-control">
                 </div>
             
                 <div class="form-group">
                     <label for="exampleInputEmail1">סיסמא</label>
-                        <input type="password" class="form-control">
+                        <input type="password" id="pass_trainer" class="form-control">
                 </div>
 
             <div class="form-group">
                     <label for="exampleInputEmail1">וידוא סיסמא</label>
-                        <input type="password" class="form-control">
+                        <input  type="password" id="confirm_pass_trainer" class="form-control">
             </div>
 
                 <div class="form-group">
                     <label for="exampleFormControlFile1">תעודת מאלף</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input type="file" class="form-control-file" id="approve_pic_trainer">
                 </div>
-
-                <button type="submit" class="btn btn-outline-secondary btn-sm btn-block">הירשם</button>
+ 
+                <button type="button" id="btn_reg_trainer"  class="btn btn-outline-secondary btn-sm btn-block">הירשם</button>
         </form>
     </div>
 
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-owner-tab">
 
-        <form>
+<!-- הרשמה של בעל כלב -->
+        <form id="rtl">
             <div class="form-group">
                 <label for="exampleInputEmail1">שם פרטי</label>
-                   <input type="text" class="form-control">
+                   <input type="text" id="fname_owner" class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">שם משפחה</label>
-                    <input type="text" class="form-control">
+                    <input type="text" id="lname_owner" class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">סוג כלב</label>
-                    <input type="text" class="form-control">
+                    <input type="text" id="dog_kind_owner" class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">שם הכלב</label>
-                    <input type="text" class="form-control">
+                    <input type="text" id="dog_name_owner" class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">אימייל</label>
-                    <input type="email" class="form-control">
+                    <input type="email" id="email_owner" class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">סיסמא</label>
-                    <input type="password" class="form-control">
+                    <input type="password" id="pass_owner" class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">וידוא סיסמא</label>
-                    <input type="password" class="form-control">
+                    <input type="password" id="confirm_pass_owner" class="form-control">
             </div>
 
-            <button type="submit" class="btn btn-outline-secondary btn-sm btn-block">הירשם</button>
+            <button type="button" id="btn_reg_owner" class="btn btn-outline-secondary btn-sm btn-block">הירשם</button>
         </form>
 
 
@@ -106,9 +107,7 @@
         </div>
     </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <footer class="footer">
+    <footer class="footer foFPS">
         by Tal Slilat and Baruch Lebovitz
     </footer>
 

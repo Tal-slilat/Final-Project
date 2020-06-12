@@ -17,7 +17,7 @@ Class User // מחלקה אבסטרקטית שהמשתמש "בעל כלב" יו�
         return $this->firstName;
     }
 
-    public function setFirstName($ﬁrstName){
+    public function setFirstName($firstName){
         $this->firstName = $firstName;
     }
 
@@ -46,6 +46,3 @@ Class User // מחלקה אבסטרקטית שהמשתמש "בעל כלב" יו�
     }
 }
 ?>
-
-
-<!-- טל סלילת נוי לרמן ברוך ליבוביץ/ 44/1 -->

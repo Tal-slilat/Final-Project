@@ -66,11 +66,11 @@
                     <a class="nav-link" href="contact_us.php">צור קשר</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="firdtPade.php">יציאה</a>
+                    <a class="nav-link" href="firstPage.php">יציאה</a>
                 </li>
             </ul>
 
-            <span class="text-reight" style="color:white;">שלום, "שם היוזר"</span>
+            <!-- <span class="text-reight" style="color:white;">שלום, "שם היוזר"</span> -->
 
         </div>
     </nav>

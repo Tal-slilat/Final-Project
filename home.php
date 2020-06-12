@@ -30,12 +30,9 @@
     </div>
 
 </div>
-    
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-
-        <footer class="footer">
+        <footer class="footer foHome">
             by Tal Slilat and Baruch Lebovitz
         </footer>
 

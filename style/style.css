@@ -16,11 +16,14 @@ body {
     border-style: solid;
     height: 350px;
     width: 600px;
-    background-size: 30%;
+    background-size: 95%;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 5px;
     background-color: white;
+    background-image: url(../images/likeUnlike/whiteboardCut.png);
+
+
 }
 
 .gpsCircle {
@@ -61,6 +64,14 @@ body {
     background-color: white;
 }
 
+.lstOwners {
+    border-style: solid;
+    height: 170px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: white;
+}
+
 .sighup {
     margin-top: 120px;
     margin-left: 100px;
@@ -70,23 +81,127 @@ body {
     margin-top: 100px;
 }
 
-footer {
-    position: sticky;
-    bottom: 0;
+.mt10 {
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.footer {
+    bottom: auto;
+    text-align: center;
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: 100%;
     color: white;
-    background-color: #212529;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #343a40;
+    font-size: 1.5em;
+}
+
+.foHome {
+    margin-top: 49px;
+}
+
+.foOP {
+    margin-top: 38px;
+}
+
+.foFP {
+    margin-top: 165px;
+}
+
+.foFPS {
+    margin-top: 357px;
+}
+
+.foFPL {
+    margin-top: 180px;
+}
+
+.foTP {
+    margin-top: 38px;
+}
+
+.foProFri {
+    margin-top: 52px;
+}
+
+.lstFriends {
+    border-style: none;
+    height: 300px;
+    width: 210px;
+    background-color: white;
+}
+
+.lstFollowers {
+    border-style: solid;
+    height: 149px;
+    width: 209px;
+    border-radius: 10px;
+}
+
+.lstFollowing {
+    border-style: solid;
+    height: 149px;
+    width: 209px;
+    border-radius: 10px;
+}
+
+.searchExistFriend {
+    border-style: solid;
+    height: 330px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    background-image: url(../images/likeUnlike/dogLike.png);
+    background-position: center;
+    background-size: 80%;
+
+}
+
+.searchNotExistFriend {
+    border-style: solid;
+    height: 330px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    background-image: url(../images/likeUnlike/dogUnlike.png);
+    background-position: center;
+    background-size: 80%;
+
+}
+
+.remaindProfile {
+    border-style: solid;
+    height: 340px;
+    width: 140px;
+    border-radius: 5px;
+    background-color: white;
     text-align: center;
 }
 
-/* .row {
-    display: flex;
+.remainder {
+    border-style: solid;
+    height: 340px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
 }
 
-.row>div {
-    flex: 1;
-    background: lightgrey;
-    border: 1px solid grey;
-} */
+#missionRemaid {
+    height: 85px;
+}
+
+#rtl {
+    direction: rtl;
+}
+
+
+
+
+
+
+
+
+

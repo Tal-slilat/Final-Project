@@ -2,6 +2,7 @@
 include_once "dogOwner.php";
 include_once "email.php";
 include_once "post.php";
+// include_once "..\object\actions.php";
 
 class dbClass                  //מחלקה שמגדירה את מסד הנתונים
 {
@@ -54,36 +55,35 @@ class dbClass                  //מחלקה שמגדירה את מסד הנתו�
             // return ["flag" => 1, "arr" => $dogOwnerArray ];
         }
 
-    //פונקציה המכניסה למסד הנתונים משתמש חדש
-    public function insertNewUser($fn,$ln,$dk,$dn,$email,$password)
+    //פונקציה המכניסה למסד הנתונים משתמש חדש בעל כלב
+    public function insertNewUserDogOwner( $obj_dog_owner) // echo $reg_owner['email']['val']
      {
+ 
         try { 
-            
-            $sql = "SELECT count(email) as cnt FROM `dogowner` WHERE email = ?";
+            // בדיקה האם קיים לנו כבר משתמש עם אותה כתובת מייל
+            $sql = "SELECT count(email) as `cnt` FROM dogowner WHERE email = ?";
             $this->connect();
             $stmt = $this->connection->prepare($sql);
-            $res = $stmt->execute([$email]);
-
-
+            
+            $res = $stmt->execute([$obj_dog_owner->getEmail()]);
 
             $row = $stmt->fetch(PDO::FETCH_ASSOC); 
-                   
-            if ($row['cnt'] == 1) {// אם יש אימייל תואם במסד נתונים, לא ייתן לי להוסיף משתמש חדש עם אימייל זהה
+
+                
+            if ($row['cnt'] > 0) {// אם יש אימייל תואם במסד נתונים, לא ייתן לי להוסיף משתמש חדש עם אימייל זהה
                 return ["flag" => -1];
             }
-            $sql = "INSERT INTO dogowner (firstName,lastName,email,password,dogKind,dogName) VALUES (?,?,?,?,?,?)";
 
-            $password = password_hash($password,PASSWORD_DEFAULT); // פונקציה לקידוד סיסמא
-            
-            $stmt = $this->connection->prepare($sql);
-            $stmt->execute([ $fn,  $ln, $email, $password, $dk, $dn]);
+             $sql = "INSERT INTO dogowner (firstName,LastName,email,`password`,dogKind,dogName) VALUES (?,?,?,?,?,?)";
+                $stmt = $this->connection->prepare($sql);
+                $stmt->execute([ $obj_dog_owner->getFirstName(),$obj_dog_owner->getLastName(),$obj_dog_owner->getEmail(),$obj_dog_owner->getPassword(),$obj_dog_owner->getDogKind(),$obj_dog_owner->getDogName()]);
 
             $this->disconnect(); // מתנתק ממסד הנתונים
-           return ["flag" => 1]; // אם הדגל = 1 הכל הצליח ואפשר להמשיך
+            return ["flag" => 1]; // אם הדגל = 1 הכל הצליח ואפשר להמשיך
 
 
         }
-        catch(Exeception $e) {
+        catch(Exception $e) {
             return ["flag" => 0]; // אם הדגל = 0 יופיע הודעת שגיאה
         }
     }
@@ -201,4 +201,3 @@ public function removePost($post_id) {
 ?>
 
 
-<!-- טל סלילת נוי לרמן ברוך ליבוביץ/ 44/1 -->
